@@ -4,21 +4,23 @@ import {
   Repeat,
   Calendar,
   PhoneMissed,
-  Clock
+  Clock,
+  X
 } from "lucide-react";
 import BoxCard from "../../components/overviewPage/boxCard";
+import Recahat from "../../components/overviewPage/Recahat";
 
 
 const Overview = () => {
   return (
-    <div className="bg-[#0a102a] min-h-screen p-6">
+    <div className=" min-h-screen p-6">
       <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
         
         <BoxCard
           title="Total Calls Today"
           value="127"
           percent="+12%"
-          positive
+          pos
           icon={<Phone className="text-white" />}
           iconBg="bg-blue-500"
         />
@@ -27,7 +29,7 @@ const Overview = () => {
           title="AI-Handled Calls"
           value="98"
           percent="+77%"
-          positive
+          pos
           icon={<Headphones className="text-white" />}
           iconBg="bg-pink-500"
         />
@@ -36,7 +38,7 @@ const Overview = () => {
           title="Warm Transfer"
           value="23"
           percent="+18%"
-          positive
+          pos
           icon={<Repeat className="text-white" />}
           iconBg="bg-orange-500"
         />
@@ -45,7 +47,7 @@ const Overview = () => {
           title="Appointments Booked"
           value="34"
           percent="+8%"
-          positive
+          pos
           icon={<Calendar className="text-white" />}
           iconBg="bg-green-500"
         />
@@ -54,8 +56,9 @@ const Overview = () => {
           title="Missed / Failed Calls"
           value="6"
           percent="-3%"
-          positive={false}
-          icon={<PhoneMissed className="text-white" />}
+          pos={false}
+          
+          icon={<X className="text-white" />}
           iconBg="bg-red-500"
         />
 
@@ -63,11 +66,15 @@ const Overview = () => {
           title="Avg Call Duration"
           value="3:42"
           percent="+15%"
-          positive
+          pos
           icon={<Clock className="text-white" />}
           iconBg="bg-indigo-500"
         />
 
+      </div>
+
+      <div className="my-15">
+        <Recahat></Recahat>
       </div>
     </div>
   );

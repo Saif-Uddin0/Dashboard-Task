@@ -1,21 +1,14 @@
-const BoxCard = ({ title, value, percent, icon, iconBg, positive }) => {
+const BoxCard = ({ title, value, percent, icon, iconBg, pos }) => {
   return (
     <div
       className="
         relative rounded-xl p-5
-        bg-[#131E49]
+        bg-[#0F172B]
         shadow-lg border border-white/5
-        transition-transform duration-200 ease-in-out
-        hover:scale-[1.03]
       "
     >
-
-      {/*   */}
-      {/* Icon */}
-
-
-      {/* Content */}
-      <div className="flex items-center justify-center">
+{/* content part */}
+      <div className="flex items-center justify-between">
         <div className="mt-4">
           <p className="text-sm text-gray-400">{title}</p>
 
@@ -23,19 +16,23 @@ const BoxCard = ({ title, value, percent, icon, iconBg, positive }) => {
             {value}
           </h2>
 
-          <p
-            className={`mt-1 text-sm ${positive ? "text-green-400" : "text-red-400"
-              }`}
-          >
-            {positive ? "↑" : "↓"} {percent}
-          </p>
-        </div>
-        <div
-          className={` rounded-lg w-10 h-10 ${iconBg}`}
+          
+      </div>
+      {/* icon  */}
+      <div
+          className={`flex items-center justify-center rounded-lg w-10 h-10 ${iconBg}`}
         >
           {icon}
         </div>
-      </div>
+        </div>
+        {/* percent */}
+        <p
+            className={`mt-1 text-sm ${pos ? "text-green-400" : "text-red-400"
+              }`}
+          >
+            {pos ? "↑" : "↓"} {percent}
+          </p>
+        
     </div>
   );
 };
