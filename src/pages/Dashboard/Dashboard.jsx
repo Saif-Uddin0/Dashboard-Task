@@ -45,9 +45,8 @@ const Dashboard = () => {
                         </div>
                     </nav>
                     {/* outlet content page */}
-                    <div className="p-4"><Outlet></Outlet></div>
+                    <div className=" bg-[#131E49]"><Outlet></Outlet></div>
                 </div>
-
 
 
                 {/* sidebar */}
@@ -89,7 +88,7 @@ const Dashboard = () => {
                                 } data-tip="Homepage">
                                     {/* Home icon */}
                                     <img src={callIcon} className='h-7' alt="Home Icon" />
-                                    <span className='text-white'>Call Logs
+                                    <span className='text-white is-drawer-close:hidden'>Call Logs
                                     </span>
                                 </NavLink>
                             </li>
@@ -104,7 +103,7 @@ const Dashboard = () => {
                                 } data-tip="Homepage">
                                     {/* Home icon */}
                                     <img src={calederIcon} className='h-7' alt="Home Icon" />
-                                    <span className='text-white'>Appointments
+                                    <span className='text-white is-drawer-close:hidden'>Appointments
                                     </span>
                                 </NavLink>
                             </li>
@@ -119,7 +118,7 @@ const Dashboard = () => {
                                 } data-tip="Homepage">
                                     {/* Home icon */}
                                     <img src={settingIcon} className='h-7' alt="Home Icon" />
-                                    <span className='text-white'>Settings
+                                    <span className='text-white is-drawer-close:hidden'>Settings
                                     </span>
                                 </NavLink>
                             </li>
@@ -127,7 +126,7 @@ const Dashboard = () => {
                         </ul>
 
                         {/* log out button */}
-                        <div className='flex items-center gap-3 px-5 py-10'>
+                        <div className='flex items-center gap-3 px-5 py-10 is-drawer-close:hidden'>
                             <img src={logoutIcon} alt="Icon" className='h-5' />
                             <button className="flex items-center gap-3 text-sm text-red-500 w-full">
 
