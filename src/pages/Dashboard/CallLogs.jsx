@@ -2,7 +2,7 @@ import React from 'react';
 
 const CallLogs = () => {
     return (
-        <div>
+        <div className='bg-[#131E49] min-h-screen'>
             this is call Logs
         </div>
     );

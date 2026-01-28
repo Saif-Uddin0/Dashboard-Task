@@ -9,6 +9,7 @@ import {
 } from "lucide-react";
 import BoxCard from "../../components/overviewPage/boxCard";
 import Recahat from "../../components/overviewPage/Recahat";
+import BottomSection from "../../components/overviewPage/BottomSection";
 
 
 const Overview = () => {
@@ -75,6 +76,10 @@ const Overview = () => {
 
       <div className="my-15">
         <Recahat></Recahat>
+      </div>
+
+      <div>
+        <BottomSection></BottomSection>
       </div>
     </div>
   );

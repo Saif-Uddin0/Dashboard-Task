@@ -10,17 +10,17 @@ import {
 
 const Recahat = () => {
   const data = [
-    { day: "Mon", call: 45 },
-    { day: "Tue", call: 65 },
-    { day: "Wed", call: 60 },
-    { day: "Thu", call: 75 },
-    { day: "Fri", call: 90 },
-    { day: "Sat", call: 100 },
-    { day: "Sun", call: 70 },
+    {day:"Mon",call:45},
+    {day:"Tue",call:65},
+    {day:"Wed",call:60},
+    {day:"Thu",call:75},
+    {day:"Fri",call:90},
+    {day:"Sat",call:100},
+    {day:"Sun",call:70 },
   ];
 
   return (
-    <div className="w-full h-[320px] rounded-xl bg-gradient-to-b from-[#0E1B3F] to-[#0A1230] p-4 flex flex-col">
+    <div className="w-full h-[400px] rounded-xl bg-[#0F172B] p-4 flex flex-col">
 
       {/* header part*/}
       <div className="my-3 flex items-center justify-between">
