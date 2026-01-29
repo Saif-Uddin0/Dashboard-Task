@@ -9,6 +9,7 @@ import Appointment from '../pages/Dashboard/Appointment';
 import Setting from '../pages/Dashboard/Setting';
 import Home from '../pages/Home/Home';
 import Overview from '../pages/Dashboard/Overview';
+import EditProfile from '../pages/Dashboard/EditProfile';
 
 
 
@@ -44,8 +45,15 @@ export const router = createBrowserRouter([
       },
       {
         path: 'setting',
-        element: <Setting></Setting>
+        element: <Setting></Setting>,
+        
       },
-    ]
+
+          {
+            path: 'edit',
+            element: <EditProfile></EditProfile>
+          }
+        ]
+
   }
 ]);

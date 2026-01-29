@@ -1,66 +1,44 @@
-import { Phone, Clock } from "lucide-react";
+import { Phone, Clock, Tag } from "lucide-react";
+import tagIcon from '../../assets/Icon (4).png'
 
 const CallListItem = ({ call }) => {
     return (
-        <div
-            className="
-        flex justify-between items-start
-        px-4 py-3
-        rounded-xl
-        bg-[#0F172B]/60
-        hover:bg-[#0F172B]/90
-        transition cursor-pointer
-      "
-        >
-            {/* LEFT SIDE */}
-            <div className="flex gap-3">
-                {/* ICON */}
-                <div className="flex bg-blue-500 items-center justify-center rounded-lg w-10 h-10  ">
-                    <Phone size={18} className="text-white" />
+        <div className="border-b border-white/10 px-4 py-3">
+            <div className="flex flex-col md:flex-row gap-2 items-center justify-between">
+                <div className="flex items-center gap-4">
+                    <span className="h-11 w-11 rounded-xl bg-gradient-to-b from-blue-600 to-sky-400 flex items-center justify-center">
+                        <Phone size={18} className="text-white" />
+                    </span>
+                    <div>
+                        <h1 className="text-lg text-white"> {call.number}</h1>
+                        <div>
+                            <p className="text-xs text-white/50 mt-0.5">
+                                2025-12-16 – {call.time} AM
+                            </p>
+                        </div>
+                    </div>
                 </div>
-
-                {/* TEXT */}
-                <div>
-                    {/* NUMBER */}
-                    <div className="flex  items-center justify-between">
-                        <p className="text-sm font-medium text-white leading-tight">
-                            {call.number}
-                        </p>
-                        <span
+                <span
                     className={`
-            text-[10px] font-medium
-            px-2 py-0.5 rounded
+            text-[11px] font-medium
+            px-2.5 py-1 rounded-full
+            border ${call.border}
             ${call.statusColor}
           `}
                 >
                     {call.status}
                 </span>
-                    </div>
-
-                    {/* META */}
-                    <div className="flex items-center gap-3 text-[11px] text-white/50 mt-1">
-                        <span className="flex items-center gap-1">
-                            <Clock size={11} />
-                            {call.duration}
-                        </span>
-                        <span>{call.meta}</span>
-                    </div>
-                </div>
             </div>
-
-            {/* RIGHT SIDE */}
-            <div className="flex flex-col items-end gap-1">
-                {/* STATUS BADGE */}
-                
-
-                {/* TAG */}
-                <span
-                    className={`
-            text-[10px]
-            px-2 py-0.5 rounded
-            ${call.tagColor}
-          `}
-                >
+            <div className="flex items-center gap-4 mt-3 text-xs text-white/60">
+                <span className="flex items-center gap-1 text-sm">
+                    <Clock size={12} />
+                    <span>{call.duration}</span>
+                </span>
+                <span className="flex items-center gap-1 text-sm">
+                    <img src={tagIcon} alt="Icon"  className="h-4 w-4"/>
+                    {call.meta}
+                </span>
+                <span className="px-2 py-0.5 rounded-md bg-blue-600/20 text-blue-400 text-sm ">
                     {call.tag}
                 </span>
             </div>
