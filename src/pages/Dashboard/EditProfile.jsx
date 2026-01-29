@@ -8,7 +8,7 @@ const EditProfile = () => {
         <div className="min-h-screen bg-[#131E49] p-8 text-white">
 
             <div className="flex gap-8 mb-8 text-sm">
-                <button className="text-lg text-white">
+                <button className="text-lg text-white border-b">
                     Profile
                 </button>
                 <button className="text-white text-lg">

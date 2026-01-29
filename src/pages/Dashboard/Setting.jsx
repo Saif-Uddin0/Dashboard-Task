@@ -9,9 +9,9 @@ const Setting = () => {
 
       {/* tabs */}
       <div className="flex gap-8 mb-8 text-sm">
-        <button className="text-lg text-white">
+        <NavLink to={'/dashboard/edit'} className="text-lg text-white">
           Profile
-        </button>
+        </NavLink>
         <button className="text-white text-lg">
           Password Settings
         </button>
@@ -31,9 +31,9 @@ const Setting = () => {
               className="h-20 w-20  object-cover"
             />
 {/* navlink buton for editing page */}
-            <NavLink to={'/dashboard/edit'} className="px-4  rounded-full bg-transparent text-white  shadow-[inset_0_1px_10px_white,1px_6px_12px_rgba(59,130,246,0.45)] border border-white/40 ">
+            <button className="px-4  rounded-full bg-transparent text-white  shadow-[inset_0_1px_10px_white,1px_6px_12px_rgba(59,130,246,0.45)] border border-white/40 ">
               Edit Profile
-            </NavLink>
+            </button>
           </div>
         </div>
 
