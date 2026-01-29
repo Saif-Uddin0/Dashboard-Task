@@ -1,72 +1,84 @@
 import React from 'react';
 import { Pencil } from "lucide-react";
+import avatar from '../../assets/Avatar Style 6.png'
+import profileIcon from '../../assets/Frame 2147228245.png'
 
 const EditProfile = () => {
     return (
-        <div className="min-h-screen flex justify-center items-center  text-white">
-            <div className=" w-full max-w-2xl rounded-2xl shadow-xl p-8">
-                {/* Tabs */}
-                <div className="flex border-b border-blue-700 mb-6">
-                    <button className="text-white px-4 py-2 border-b-2 border-green-400 font-semibold">
-                        Profile
-                    </button>
-                    <button className="text-gray-400 px-4 py-2">Password Settings</button>
-                </div>
+        <div className="min-h-screen bg-[#131E49] p-8 text-white">
 
-                {/* Profile Section */}
-                <div className="flex flex-col items-center mb-8">
-                    <div className="relative">
-                        <img
-                            src="https://i.pravatar.cc/100"
-                            alt="Profile"
-                            className="w-24 h-24 rounded-full border-4 border-green-400 object-cover"
-                        />
-                        <button className="absolute bottom-0 right-0 bg-green-400 text-[#0D1B3D] p-2 rounded-full hover:scale-110 transition">
-                            <Pencil className="w-4 h-4" />
-                        </button>
-                    </div>
-                </div>
+            <div className="flex gap-8 mb-8 text-sm">
+                <button className="text-lg text-white">
+                    Profile
+                </button>
+                <button className="text-white text-lg">
+                    Password Settings
+                </button>
+            </div>
 
-                {/* Form */}
+
+<p className="mb-3 text-lg mt-10">Profile Image</p>
+            <div className="relative w-20 h-20">
+                
+
+                <img
+                    src={avatar}
+                    alt="Profile"
+                    className="h-20 w-20 object-cover rounded-full"
+                />
+
+                <img
+                    src={profileIcon}
+                    alt="Edit profile"
+                    className="w-8 h-8 absolute bottom-0 right-0 rounded-full  "
+                />
+            </div>
+
+            <div className=" w-full max-w-2xl rounded-2xl ">
+                {/* tabs */}
+
+
+
+                {/* form */}
                 <form className="space-y-4">
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mt-8">
                         <div>
-                            <label className="text-sm text-gray-300 mb-1 block">Full Name</label>
+                            <label className="text-sm text-white mb-1 block">Full Name</label>
                             <input
                                 type="text"
-                                placeholder="Maimuna Mumu"
-                                className="input input-bordered w-full bg-[#1B2A57] text-white border-none focus:outline-none focus:ring-2 focus:ring-green-400"
+                                placeholder="Jane D."
+                                className="input rounded-xl border border-white/20 w-full bg-[#0A0A0F80] text-white  focus:outline-none focus:ring-2 focus:ring-green-400"
                             />
                         </div>
                         <div>
-                            <label className="text-sm text-gray-300 mb-1 block">Email</label>
+                            <label className="text-sm text-white mb-1 block">Email</label>
                             <input
                                 type="email"
-                                placeholder="jam@gmail.com"
-                                className="input input-bordered w-full bg-[#1B2A57] text-white border-none focus:outline-none focus:ring-2 focus:ring-green-400"
+                                placeholder="jane@gmail.com"
+                                className="input rounded-xl border border-white/20 w-full bg-[#0A0A0F80] text-white  focus:outline-none focus:ring-2 focus:ring-green-400"
                             />
                         </div>
                         <div>
-                            <label className="text-sm text-gray-300 mb-1 block">Store Name</label>
+                            <label className="text-sm text-white mb-1 block">Store Name</label>
                             <input
                                 type="text"
-                                placeholder="Umbrella Store"
-                                className="input input-bordered w-full bg-[#1B2A57] text-white border-none focus:outline-none focus:ring-2 focus:ring-green-400"
+                                placeholder="Ubreakfix Store"
+                                className="input rounded-xl border border-white/20  w-full bg-[#0A0A0F80] text-white  focus:outline-none focus:ring-2 focus:ring-green-300"
                             />
                         </div>
                         <div>
-                            <label className="text-sm text-gray-300 mb-1 block">Store Address</label>
+                            <label className="text-sm text-white mb-1 block">Store Address</label>
                             <input
                                 type="text"
                                 placeholder="123 Main Street, New York"
-                                className="input input-bordered w-full bg-[#1B2A57] text-white border-none focus:outline-none focus:ring-2 focus:ring-green-400"
+                                className="input rounded-xl border border-white/20 w-full bg-[#0A0A0F80] text-white focus:outline-none focus:ring-2 focus:ring-green-400"
                             />
                         </div>
                     </div>
 
-                    {/* Save Button */}
+                    {/* button */}
                     <div className="flex justify-center mt-8">
-                        <button className="btn bg-green-500 hover:bg-green-600 text-white px-10">
+                        <button className="btn rounded-xl px-15 md:px-35 bg-green-500 hover:bg-green-600 text-white text-lg  border-none shadow-none">
                             Save
                         </button>
                     </div>
