@@ -23,8 +23,8 @@ https://github.com/Saif-Uddin0/Dashboard-Task
 
 ##  Run Locally
 cmd >
-git clone https://github.com/Saif-Uddin0/Dashboard-Task.git
-cd Dashboard-Task
-npm install
+git clone https://github.com/Saif-Uddin0/Dashboard-Task.git >
+cd Dashboard-Task >
+npm install >
 npm run dev
 
