@@ -14,7 +14,7 @@ import logoutIcon from '../../assets/streamline-flex_logout-1-remix.png'
 
 
 const Dashboard = () => {
-    const location = useLocation()
+    const location = useLocation();
 
     // dynamic title
     const switchTitlte = {

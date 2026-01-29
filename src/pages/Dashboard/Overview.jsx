@@ -7,9 +7,10 @@ import {
   Clock,
   X
 } from "lucide-react";
+
+import Recahat from "../../components/OverviewPage/Recahat";
+import BottomSection from "../../components/OverviewPage/BottomSection";
 import BoxCard from "../../components/overviewPage/boxCard";
-import Recahat from "../../components/overviewPage/Recahat";
-import BottomSection from "../../components/overviewPage/BottomSection";
 
 
 const Overview = () => {

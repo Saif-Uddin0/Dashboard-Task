@@ -106,7 +106,7 @@ const CallLogs = () => {
 
 
             {/* bottom content */}
-            <div className='grid md:grid-cols-12 gap-8 justify-between p-10  w-full'>
+            <div className='grid md:grid-cols-12 gap-8 justify-between p-5 md:p-10  w-full'>
                 <div className="bg-[#0F172B] backdrop-blur rounded-2xl p-3 space-y-2 md:col-span-6">
                     <h1 className='text-2xl text-white p-5 border-b border-white/10'>Call List</h1>
                     {calls.map((call) => (
